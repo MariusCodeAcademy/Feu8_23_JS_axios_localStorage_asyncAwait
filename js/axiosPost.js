@@ -22,3 +22,14 @@ fetch(url, {
   .catch((error) => {
     console.warn('ivyko klaida:', error);
   });
+
+// siusti posta kad sukurti nauja posta su axios
+axios
+  .post(url, newPostObj)
+  .then((axiosResp) => {
+    console.log('axiosResp ===', axiosResp);
+    console.log('resp.data ===', axiosResp.data);
+  })
+  .catch((error) => {
+    console.warn('ivyko klaida:', error);
+  });
