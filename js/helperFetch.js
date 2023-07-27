@@ -1,6 +1,6 @@
 import { getData, getDataAsync, apiData } from './modules/getData.js';
 console.log('helperFetch.js file was loaded');
-const url = 'https://jsonplaceholder.typicode.com/posts';
+const url = 'https://jsonplaceholder.typicode.com/posts/1';
 // const posts = fetchGet('https://jsonplaceholder.typicode.com/posts'); // nono
 
 getData(url).then((posts) => {
@@ -18,8 +18,12 @@ async function init() {
     console.log('galiu valdyti klaida', error);
     alert(error.message);
   }
+
   console.log('data ===', data);
   // render(posts);
+
+  const arrSu2Reikmem = await apiData(url);
+  console.log('arrSu2Reikmem ===', arrSu2Reikmem);
 }
 init();
 
