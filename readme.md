@@ -1,5 +1,7 @@
 # Praktika
 
+## atlikti pakeitimus praktikai skirtus atskiroje practice sakoje
+
 1. Perisdaryti 21 paskaitos viska arba is dalies viska kad uzklausos vyktu su axios vietoj fetch
 2. Persidaryti bent keleta funkciju is '.then()' ir async ir await
 3. pabaigti likusi funkcionaluma 21 paskaitos ir is pries tai uzduociu ko nesate pabaige.
