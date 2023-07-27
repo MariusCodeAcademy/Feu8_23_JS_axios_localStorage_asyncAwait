@@ -33,8 +33,12 @@ fetchUsersA();
 // su async await parasyt funkcija kuri grazina postus
 // https://jsonplaceholder.typicode.com/posts
 async function getPosts() {
-  const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
-  const dataInJs = await resp.json();
-  console.log('dataInJs ===', dataInJs.slice(0, 15));
+  try {
+    const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const dataInJs = await resp.json();
+    console.log('dataInJs ===', dataInJs.slice(0, 15));
+  } catch (error) {
+    console.warn('FETCH await ivyko klaida:', error);
+  }
 }
 getPosts();
